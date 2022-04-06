@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
-void main() {
+Future<void> main() async {
+  // スプラッシュ画面を確認しやすいように3秒停止
+  await Future<void>.delayed(const Duration(seconds: 3));
   runApp(const MyApp());
 }
 

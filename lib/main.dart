@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 Future<void> main() async {
   // スプラッシュ画面を確認しやすいように3秒停止
-  await Future<void>.delayed(const Duration(seconds: 3));
+  // await Future<void>.delayed(const Duration(seconds: 10));
   runApp(const MyApp());
 }
 

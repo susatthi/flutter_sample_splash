@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 void main() {
+  final widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   runApp(const MyApp());
 }
 
@@ -38,6 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
     Future(() async {
       await Future<void>.delayed(const Duration(seconds: 2));
       setState(() {
+        FlutterNativeSplash.remove();
         _counter = 10;
         _isLoading = false;
       });
